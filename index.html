@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="css/styles.css">
+    
+</head>
+<body>
+    
+    <main class="text-align">
+
+        <!--Left Side-->
+        <section class="main-content">
+            
+            <section > 
+                <!-- About article -->
+                <header>
+                    <h2>Kalkulator BMI</h2>
+                </header>
+                <article>
+                    <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana dengan kamu? Yuk, hitung sekarang di kalkulator BMI.</p>
+                </article>
+            </section>    
+
+            <section>
+                <!-- Form -->
+                <form id="form-bmi">
+                    <div>
+                        <div><h4>Jenis Kelamin</h4></div>
+                        <label><input type="radio" name="jenis-kelamin" value="pria" required>Pria</label>
+                        <label><input type="radio" name="jenis-kelamin" value="wanita" required>Wanita</label>
+                    </div>
+
+                    <div>
+                        <input type="number" id="input-berat-badan" placeholder="Masukkan berat badan anda" required>
+                    </div>
+
+                    <div>
+                        <input type="number" id="input-usia" placeholder="Masukkan angka usia anda" required>
+                    </div>
+
+                    <div>
+                        <input type="number" id="input-tinggi-badan" placeholder="Masukkan tinggi badan anda" required>
+                    </div>
+
+                    <div>
+                        <button class="button submit" type="button" onclick="hitungBmi(event)">Hitung BMI</button>
+                    </div>
+                </form>
+            </section>
+
+            <section>
+                <!-- Feature article -->
+                <header>
+                    <h4>Keunggulan fitur dari kalkulator ini:</h4>
+                </header>
+
+                <article>
+                    <ol>
+                        <li>Menghitung berat badan</li>
+                        <li>Menentukan kategori berat badan ideal atau tidak</li>
+                        <li>Mempersiapkan program penurunan berat badan</li>
+                    </ol>
+
+                    <p>
+                        Kalkulator ini hanya boleh digunakan oleh orang dewasa <strong>(wanita hamil atau menyusui tidak boleh mengandalkan pembacaan BMI ini)</strong> dan tidak ada tindakan yang harus diambil berdasarkan nilai yang dihasilkan selain berkonsultasi dengan orang yang memiliki standar seperti dokter.
+                    </p>
+                </article>
+            </section>
+        
+        </section>
+        
+        <!-- Right Content -->
+        <section class="main-content">
+            
+            <!-- Article Hasil -->
+            <article>
+                <header>
+                    <h2>Hasil</h2>
+                </header>
+            </article>
+            
+            <!-- Hasil -->
+            <section class="result-form">
+                <p>Hasil kalkulasi kondisi tubuh anda adalah</p>
+
+                <h2 id="hasil-bmi">0</h2>
+
+                <p id="kategori-bmi"></p>
+
+                <button class="button reset" type="button" id="reset-button" onclick="resetButton()">Reset</button>
+            </section>
+            
+            <br>
+
+            <!-- Tabel & penjelasan hasil -->
+            <section class="tabel-hasil">
+                <table>
+                    <tr class="head">
+                        <th>BMI</th>
+                        <th>Keterangan Informasi</th>
+                    </tr>
+                    <tr class="body">
+                        <td>KURANG DARI 18.5</td>
+                        <td>KEKURANGAN BERAT BADAN</td>
+                    </tr>
+                    <tr class="body">
+                        <td>18.5-24.9</td>
+                        <td>NORMAL</td>
+                    </tr>
+                    <tr class="body">
+                        <td>25.0-29.9</td>
+                        <td>KELEBIHAN BERAT BADAN</td>
+                    </tr>
+                    <tr class="body">
+                        <td>30 ATAU LEBIH</td>
+                        <td>KEGEMUKAN</td>
+                    </tr>
+                </table>
+            </section>
+        
+        </section>        
+    </main>
+
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
